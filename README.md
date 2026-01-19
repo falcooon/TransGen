@@ -1,2 +1,4 @@
 # TransGen
 De Novo Enzyme Sequence Generation Conditioned on Chemical Transitions
+<img width="1988" height="1947" alt="资源 16" src="https://github.com/user-attachments/assets/5168d75e-cf20-444d-ae66-980646733552" />
+Overview of the TransGen architecture. The framework integrates two primary pathways to map biochemical transitions to protein sequences: \textbf{(a) Enzyme Sequence Generation and Alignment:} The student network employs a multi-scale context aggregator with dilated blocks to recover residues while a linear projector aligns latent features with a frozen ESM-2 teacher to inherit natural sequence patterns. \textbf{(b) Reaction Encoding and Conditioning:} Substrate and product molecules are processed via RDKit and MolT5 to derive the reaction vector $\Delta_{rxn}$, which is injected into the generator via AdaLN to provide substrate-specific logic.
