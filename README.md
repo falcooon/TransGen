@@ -23,7 +23,6 @@ TransGen/
 │   ├── build_vocab.py       # Vocabulary building
 │   ├── metrics.py           # Evaluation metrics
 │   └── trainer.py           # Trainer implementation
-├── evodiff/                 # EvoDiff diffusion model module
 ├── config/                  # Configuration files
 ├── analysis/                # Analysis scripts
 └── examples/                # Example code
