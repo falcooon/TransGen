@@ -1,0 +1,25 @@
+{
+  "experiment": "pretrain",
+  "task": "mlm",
+  "dataset": "uniref50",
+  "d_embed": 16,
+  "d_model": 1024,
+  "activation": "gelu",
+  "slim": true,
+  "epochs": 500,
+  "n_layers": 16,
+  "kernel_size": 5,
+  "r": 128,
+  "max_tokens": 10000,
+  "max_tokens_": 1000,
+  "max_batch_size": 1000,
+  "max_batch_size_": 1000,
+  "bucket_size": 1000,
+  "opt_level": "O2",
+  "lr": 5e-5,
+  "warmup_steps": 10000,
+  "train_steps": 8000,
+  "diffusion_timesteps": 500,
+  "accumulate": 1
+}
+
