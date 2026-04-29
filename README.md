@@ -5,17 +5,16 @@
 De novo enzyme design remains challenging because abstract catalytic logic is difficult to encode directly into amino acid sequences. Existing approaches often rely on homology search, random mutation, or coarse functional conditioning, resulting in low efficiency and substantial manual intervention. To address these limitations, we introduce TransGen, a generative model that uses dilated convolutions and directly integrates reaction-level catalytic changes into protein sequence generation. The model is trained and evaluated on UDP-glycosyltransferases (UGTs), enzymes crucial in plant metabolism. Each reaction is encoded as a single Reaction Vector, defined as the difference between aggregated product and reactant embeddings. Incorporating the Reaction Vector through Adaptive Layer Normalization (AdaLN) conditions residue-level sequence patterns, while alignment of latent representations with the ESM-2 knowledge space promotes the biological plausibility of generated sequences. Docking analysis suggests that the generated sequences preserve pocket-level structural compatibility with the target reactions. By generating protein sequences in response to reaction-specific chemical signals, TransGen provides a promising framework for controllable enzyme sequence design.
 ## Key Features
 
-- **Protein Feature Extraction**: Extract high-dimensional embeddings from protein sequences using pre-trained models like ESM-2 and ProtT5
+- **Protein Feature Extraction**: Extract high-dimensional embeddings from protein sequences using pre-trained models like ESM-2
 - **Molecular Processing**: SMILES parsing and molecular graph construction based on RDKit
 - **Data Preprocessing**: Tools for FASTA file processing, dataset splitting, and offset calculation
-- **Graph Neural Network Support**: Protein contact map construction and edge weight computation
 
 ## Project Structure
 
 ```
 TransGen/
 ├── utils/
-│   ├── protein_init.py      # Protein initialization and feature extraction (ESM-2, ProtT5)
+│   ├── protein_init.py      # Protein initialization and feature extraction (ESM-2)
 │   ├── ligand_init.py       # Ligand/molecule initialization and feature extraction
 │   ├── split_data.py        # Dataset splitting and FASTA processing tools
 │   ├── split.py             # SMILES tokenization and Transformer components
